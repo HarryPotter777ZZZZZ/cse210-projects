@@ -4,11 +4,11 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Console.WriteLine("Hello World! This is the Exercise1 Project.");
-        
+        // Ask for the first name
         Console.Write("What is your first name? ");
         string first = Console.ReadLine();
-
+        
+        // Ask for the family bane
         Console.Write("What is your last name? ");
         string last = Console.ReadLine();
 
