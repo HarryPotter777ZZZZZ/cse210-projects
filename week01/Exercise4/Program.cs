@@ -58,5 +58,19 @@ class Program
         }
 
         Console.WriteLine($"The max is: {max}");
+
+        // New Part 4: Find the smallest positive number
+        int smallestPositiveNumber = numbers.Where(n => n > 0).DefaultIfEmpty(int.MaxValue).Min();
+        Console.WriteLine($"The smallest positive number is: {smallestPositiveNumber}");
+
+        // New Part 5: Sort the list
+        List<int> sortedNumbers = numbers.OrderBy(n => n).ToList();
+
+        // New Part 6: Display the sorted list
+        Console.WriteLine("The sorted list is:");
+        foreach (int num in sortedNumbers)
+        {
+            Console.WriteLine(num);
+        }
     }
 }
