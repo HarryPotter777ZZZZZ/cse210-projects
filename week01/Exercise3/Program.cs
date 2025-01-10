@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Console.WriteLine("Hello World! This is the Exercise3 Project.");
+        Console.WriteLine("Hello World! This is the Exercise3 Project.");
          // For Parts 1 and 2, where the user specified the number...
         // Console.Write("What is the magic number? ");
         // int magicNumber = int.Parse(Console.ReadLine());

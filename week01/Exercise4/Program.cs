@@ -34,12 +34,7 @@ class Program
         Console.WriteLine($"The sum is: {sum}");
 
         // Part 2: Compute the average
-        // Notice that we first cast the sum variable to be a float. Otherwise, because
-        // both the sum and the count are integers, the computer will do integer division
-        // and I will not get a decimal value (even though it puts the result into a float variable).
-
-        // By making one of the variables a float first, the computer knows that it has to
-        // do the floating point division, and we get the decimal value that we expect.
+        
         float average = ((float)sum) / numbers.Count;
         Console.WriteLine($"The average is: {average}");
 
