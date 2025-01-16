@@ -10,7 +10,7 @@ class Program
         job1._jobTitle = "Software Engineer";
         job1.Disblay();
 
-        myResume._jobs[0]._jobTitle
+        resume1 = myResume._jobs[0]._jobTitle
         resume.Display();
 
     }
