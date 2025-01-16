@@ -6,8 +6,8 @@ class Program
     {
         Console.WriteLine("Hello World! This is the Exercise3 Project.");
          // For Parts 1 and 2, where the user specified the number...
-        // Console.Write("What is the magic number? ");
-        // int magicNumber = int.Parse(Console.ReadLine());
+         // Console.Write("What is the magic number? ");
+         // int magicNumber = int.Parse(Console.ReadLine());
         
         // For Part 3, where we use a random number
         Random randomGenerator = new Random();
