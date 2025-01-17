@@ -28,7 +28,7 @@ class Program
         // Add job1 and job2
         myResume._jobs.Add(job1);
         myResume._jobs.Add(job2);
-        // myResume._jobs[0]._jobTitle.Display();
+        // recommended in Learning Activity to use: myResume._jobs[0]._jobTitle.Display();
         myResume.Display();
 
     }
