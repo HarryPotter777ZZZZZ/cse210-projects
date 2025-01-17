@@ -23,10 +23,13 @@ class Program
         job2.Display();
 
         // Resume instantiation
-        // Resume resume = new Resume();
-
-
-
+        Resume myResume = new Resume();
+        myResume._name = "Harry Ushenin";
+        // Add job1 and job2
+        myResume._jobs.Add(job1);
+        myResume._jobs.Add(job2);
+        // myResume._jobs[0]._jobTitle.Display();
+        myResume.Display();
 
     }
 }
