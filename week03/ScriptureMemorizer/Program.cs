@@ -29,6 +29,7 @@ class Program
 
         Console.WriteLine("\nAll words are hidden. Program ended.");
     }
+    }
 }
 
 
