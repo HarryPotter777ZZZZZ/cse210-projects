@@ -30,7 +30,7 @@ class Program
         videos[2].AddComment(new Comment("Comment 3", "Looking forward to more!"));
 
         // Display info for each Video
-        foreach (var videp in videos)
+        foreach (var video in videos)
         {
             Console.WriteLine($"Title: (video.Title)");
             Console.WriteLine($"Author: (video.Author)");

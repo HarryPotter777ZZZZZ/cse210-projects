@@ -13,7 +13,7 @@ public class Video
         Title = title;
         Author = author;
         Length = length;
-        Comments = new List<Comment>();
+        _comments = new List<Comment>();
     }
 
     public void AddComment(Comment comment);

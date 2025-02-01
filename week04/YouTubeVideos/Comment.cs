@@ -1,7 +1,7 @@
 public class Comment
 {
-    private string CommenterName { get; set; }
-    private string Text { get; set; }
+    punlic string CommenterName { get; set; } // private
+    public string Text { get; set; } // private
 
     public Comment(string commenterName; string text)
     {
