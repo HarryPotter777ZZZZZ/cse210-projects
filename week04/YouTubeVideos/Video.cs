@@ -5,7 +5,7 @@ public class Video
 {
     public string Title { get; set; } //was private
     public  string Author { get; set; } //was private
-    public int Length { get; set; } // was private
+    public int Length { get; set; } // Length is seconds ...was private ?
     private List<Comment> _comments;
 
     public Video(string title, string author, int length)
