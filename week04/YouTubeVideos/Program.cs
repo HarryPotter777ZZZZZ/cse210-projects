@@ -5,15 +5,7 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Hello World! This is the YouTubeVideos Project.");
-    
-
-        using System;
-using System.Collections.Generic;
-
-class Program
-{
-    static void Main(string[] args)
-    {
+        
         List<Video> videos = new List<Video>
         {
             new Video("Video 1", "Author 1", 300),
