@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 public class ReflectionActivity : Activity
 {
     private List<string> _prompts = new List<string>
@@ -24,15 +21,19 @@ public class ReflectionActivity : Activity
         "How can you keep this experience in mind in the future?"
     };
 
+    private Queue<string> _shuffledPrompts;
+    private Queue<string> _shuffledQuestions;
+
     public ReflectionActivity() : base("Reflection", "This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.")
     {
+        _shuffledPrompts = new Queue<string>(_prompts.OrderBy(x => Guid.NewGuid()));
+        _shuffledQuestions = new Queue<string>(_questions.OrderBy(x => Guid.NewGuid()));
     }
 
     public override void Run()
     {
         DisplayStartingMessage();
-        Random random = new Random();
-        string prompt = GetRandomPrompt();
+        string prompt = GetNextPrompt();
         Console.WriteLine(prompt);
         ShowSpinner(3);
 
@@ -40,7 +41,7 @@ public class ReflectionActivity : Activity
 
         while (DateTime.Now < endTime)
         {
-            string question = GetRandomQuestion();
+            string question = GetNextQuestion();
             Console.WriteLine(question);
             ShowSpinner(3);
         }
@@ -48,15 +49,21 @@ public class ReflectionActivity : Activity
         DisplayEndingMessage();
     }
 
-    private string GetRandomPrompt()
+    private string GetNextPrompt()
     {
-        Random random = new Random();
-        return _prompts[random.Next(_prompts.Count)];
+        if (_shuffledPrompts.Count == 0)
+        {
+            _shuffledPrompts = new Queue<string>(_prompts.OrderBy(x => Guid.NewGuid()));
+        }
+        return _shuffledPrompts.Dequeue();
     }
 
-    private string GetRandomQuestion()
+    private string GetNextQuestion()
     {
-        Random random = new Random();
-        return _questions[random.Next(_questions.Count)];
+        if (_shuffledQuestions.Count == 0)
+        {
+            _shuffledQuestions = new Queue<string>(_questions.OrderBy(x => Guid.NewGuid()));
+        }
+        return _shuffledQuestions.Dequeue();
     }
 }

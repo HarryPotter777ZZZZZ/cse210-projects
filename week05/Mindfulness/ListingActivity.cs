@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 public class ListingActivity : Activity
 {
     private List<string> _prompts = new List<string>
@@ -21,7 +18,6 @@ public class ListingActivity : Activity
     public override void Run()
     {
         DisplayStartingMessage();
-        Random random = new Random();
         string prompt = GetRandomPrompt();
         Console.WriteLine(prompt);
         ShowSpinner(3);

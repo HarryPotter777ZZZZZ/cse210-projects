@@ -1,5 +1,7 @@
 using System;
 using System.Threading;
+using System.Collections.Generic;
+using System.IO;
 
 public abstract class Activity
 {
@@ -31,6 +33,7 @@ public abstract class Activity
         Console.WriteLine($"You have completed the {_name} activity for {_duration} seconds.");
         ShowSpinner(3);
         Console.Clear();
+        LogActivity();
     }
 
     protected void ShowSpinner(int seconds)
@@ -51,6 +54,15 @@ public abstract class Activity
             Thread.Sleep(1000);
         }
         Console.WriteLine();
+    }
+
+    protected void LogActivity()
+    {
+        string logFilePath = "activity_log.txt";
+        using (StreamWriter writer = new StreamWriter(logFilePath, true))
+        {
+            writer.WriteLine($"{DateTime.Now}: {_name} - Duration: {_duration} seconds");
+        }
     }
 
     public abstract void Run();
